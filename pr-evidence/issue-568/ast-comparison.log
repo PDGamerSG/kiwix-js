@@ -1,0 +1,13 @@
+Base: e809ccd993cca12ded4dfc40b9ad79233ed71a19
+Head: 8acdd9a6822a4edce0440cf534c0edb82a3a5f27
+Unchanged executable AST: service-worker.js
+Unchanged executable AST: www/js/lib/abstractFilesystemAccess.js
+Unchanged executable AST: www/js/lib/cache.js
+Unchanged executable AST: www/js/lib/kiwixLibrary.js
+Unchanged executable AST: www/js/lib/util.js
+Unchanged executable AST: www/js/lib/xzdec_wrapper.js
+Unchanged executable AST: www/js/lib/zimArchive.js
+Unchanged executable AST: www/js/lib/zimDirEntry.js
+Unchanged executable AST: www/js/lib/zimfile.js
+Unchanged executable AST: www/js/lib/zstddec_wrapper.js
+PASS: all 10 files contain documentation-only changes.

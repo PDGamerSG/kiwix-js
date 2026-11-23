@@ -1,0 +1,8 @@
+Head and base runs both report 42 passing, 4 pending, 6 failing.
+The same six tests fail on both commits:
+Legacy Ray Charles test [XZ compression] [SW mode] / Check for popover functionality when focusing link
+Legacy Ray Charles test [XZ compression] [SW mode] / Search for Ray Charles in title index and go to article
+Gutenberg_ro test [ZSTD compression] [SW mode] / Change Language
+Tonedear test [JQuery mode] / Navigate to Android & iOS section
+Tonedear test [SW mode] / Navigate to Android & iOS section
+Tonedear test [SW mode] / Verify Android and iOS store images in ServiceWorker mode

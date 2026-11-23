@@ -1,0 +1,14 @@
+
+> kiwix-js@4.4.2 prebuild
+> del-cli dist
+
+
+> kiwix-js@4.4.2 build
+> rollup --config --file dist/www/js/bundle.js && rollup --config --file dist/www/js/bundle.min.js --environment BUILD:production
+
+
+www/js/app.js → dist/www/js/bundle.js...
+created dist/www/js/bundle.js in 2.7s
+
+www/js/app.js → dist/www/js/bundle.min.js...
+created dist/www/js/bundle.min.js in 7.5s

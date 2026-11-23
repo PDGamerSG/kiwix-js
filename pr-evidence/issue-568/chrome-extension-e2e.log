@@ -1,0 +1,28 @@
+
+> kiwix-js@4.4.2 test-e2e-extension-chrome
+> node tests/e2e/start-server-and-run-tests.js "npx mocha --no-config ./tests/e2e/runners/chrome/chromium-extension.e2e.runner.js"
+
+Running tests against: ./dist/www/index.html (built version)
+Starting http-server...
+(node:56461) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server error: npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+http-server process started
+Server is ready on port 8080 (attempt 1)
+Running tests: npx mocha --no-config ./tests/e2e/runners/chrome/chromium-extension.e2e.runner.js
+npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+[Chrome Runner] Invoking Selenium Manager as the final browser fallback...
+[Chrome Runner] Selenium Manager provisioned Chrome: <selenium-cache>/chrome/mac-arm64/158.0.8127.36/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+
+
+  Chrome Extension Library & PWA E2E Tests [kiwix-js #1528]
+    ✔ Opens Chrome extension and verifies genuine runtime ID and title
+    ✔ Test 2: Falls back to FAU mirror when in local Chrome MV3 extension
+    ✔ Test 3: Switches to ServiceWorker mode, navigates to PWA, and loads full Library (14771ms)
+
+
+  3 passing (19s)
+
+Stopping http-server...
+Server stopped

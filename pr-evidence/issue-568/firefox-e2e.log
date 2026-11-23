@@ -1,0 +1,119 @@
+
+> kiwix-js@4.4.2 test-e2e-firefox
+> node tests/e2e/start-server-and-run-tests.js "npx mocha --no-config ./tests/e2e/runners/firefox/firefox.e2e.runner.js"
+
+Running tests against: ./dist/www/index.html (built version)
+Starting http-server...
+(node:47856) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server error: npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+http-server process started
+Server is ready on port 8080 (attempt 1)
+Running tests: npx mocha --no-config ./tests/e2e/runners/firefox/firefox.e2e.runner.js
+npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+Loading archive:
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimaa
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimab
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimac
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimad
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimae
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimaf
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimag
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimah
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimai
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimaj
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimak
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimal
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimam
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.ziman
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimao
+
+
+Running Legacy Ray Charles tests on: firefox 160.0.1
+
+Running Gutenberg RO tests on: firefox 160.0.1
+
+Running Tonedear tests on: firefox 160.0.1
+
+
+  Legacy Ray Charles test [XZ compression] [JQuery mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to jquery mode (5197ms)
+    ✔ Load legacy Ray Charles and check index contains specified article
+    ✔ Navigate to "This Little Girl of Mine"
+    ✔ Check for popover functionality when focusing link
+    ✔ Search for Ray Charles in title index and go to article
+
+  Legacy Ray Charles test [XZ compression] [SW mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to serviceworker mode (7544ms)
+    ✔ Load legacy Ray Charles and check index contains specified article
+    ✔ Navigate to "This Little Girl of Mine"
+    ✔ Check for popover functionality when focusing link
+    ✔ Search for Ray Charles in title index and go to article
+
+  Gutenberg_ro test [ZSTD compression] [JQuery mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to jquery mode (6337ms)
+    ✔ Load Modern zim file
+    ✔ Checking active content warning
+    - Following test skipped:
+    ✔ Sorting books by popularity
+    - Following test skipped:
+    - Sorting books by name
+    - Following test skipped:
+    - Change Language
+    ✔ Primary Search Autocomplete
+    ✔ Viewing HTML view
+    ✔ Navigating back
+    - Following test skipped:
+    - Author search Autocomplete
+    - Following test skipped:
+    - Author search Results
+    ✔ Download EPUB file
+
+  Gutenberg_ro test [ZSTD compression] [SW mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to serviceworker mode (8747ms)
+    ✔ Load Modern zim file
+    ✔ Checking active content warning
+    ✔ Sorting books by popularity
+    ✔ Sorting books by name
+    ✔ Change Language
+    ✔ Primary Search Autocomplete
+    ✔ Viewing HTML view
+    ✔ Navigating back
+    ✔ Author search Autocomplete
+    ✔ Author search Results
+    ✔ Download EPUB file
+
+  Archive load errors [jquery mode]
+    ✔ Allows retrying the dropdown after NotReadableError (44ms)
+    ✔ Allows retrying the dropdown after Error (42ms)
+
+  Archive load errors [serviceworker mode]
+    ✔ Allows retrying the dropdown after NotReadableError
+    ✔ Allows retrying the dropdown after Error
+
+  Tonedear test [JQuery mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to jquery mode (6333ms)
+    ✔ Load Tonedear archive
+    ✔ Navigate to Android & iOS section
+    ✔ Verify Android and iOS store images in Restricted mode
+
+  Tonedear test [SW mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to serviceworker mode (8744ms)
+    ✔ Load Tonedear archive
+    ✔ Navigate to Android & iOS section
+    ✔ Verify Android and iOS store images in ServiceWorker mode
+
+
+  48 passing (2m)
+  4 pending
+
+Stopping http-server...
+Server stopped

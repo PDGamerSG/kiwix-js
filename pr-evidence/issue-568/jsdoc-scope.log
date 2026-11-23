@@ -1,0 +1,11 @@
+Only JSDoc blocks changed: service-worker.js
+Only JSDoc blocks changed: www/js/lib/abstractFilesystemAccess.js
+Only JSDoc blocks changed: www/js/lib/cache.js
+Only JSDoc blocks changed: www/js/lib/kiwixLibrary.js
+Only JSDoc blocks changed: www/js/lib/util.js
+Only JSDoc blocks changed: www/js/lib/xzdec_wrapper.js
+Only JSDoc blocks changed: www/js/lib/zimArchive.js
+Only JSDoc blocks changed: www/js/lib/zimDirEntry.js
+Only JSDoc blocks changed: www/js/lib/zimfile.js
+Only JSDoc blocks changed: www/js/lib/zstddec_wrapper.js
+PASS: JSDoc-only diff verified in all 10 files.

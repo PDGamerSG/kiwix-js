@@ -1,0 +1,25 @@
+
+> kiwix-js@4.4.2 test-e2e-extension-firefox
+> node tests/e2e/start-server-and-run-tests.js "npx mocha --no-config ./tests/e2e/runners/firefox/firefox-extension.e2e.runner.js"
+
+Running tests against: ./dist/www/index.html (built version)
+Starting http-server...
+(node:52799) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server error: npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+http-server process started
+Server is ready on port 8080 (attempt 1)
+Running tests: npx mocha --no-config ./tests/e2e/runners/firefox/firefox-extension.e2e.runner.js
+npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+
+  Firefox Extension Library E2E Test [kiwix-js #1528]
+    ✔ Opens Firefox extension and verifies title
+    ✔ Opens Library and verifies real library content from browse.library.kiwix.org
+
+
+  2 passing (4s)
+
+Stopping http-server...
+Server stopped

@@ -1,0 +1,210 @@
+
+> kiwix-js@4.4.2 test
+> mocha
+
+Instantiating WASM xz decoder
+Instantiating WASM zstandard decoder
+WASM xz decoder failed to load, falling back to ASM because: fetch failed
+WASM zstd decoder failed to load, falling back to ASM because: fetch failed
+
+
+ZIM DirListing version: 0 (legacy) ZIMFile {
+  _files: [
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 100000, type: 'application/octet-stream' },
+    Blob { size: 76042, type: 'application/octet-stream' }
+  ],
+  name: 'wikipedia_en_ray_charles_2015-06.zim',
+  id: 0,
+  majorVersion: 5,
+  minorVersion: 0,
+  entryCount: 458,
+  articleCount: null,
+  clusterCount: 215,
+  urlPtrPos: 195,
+  titlePtrPos: 3859,
+  articlePtrPos: null,
+  fullTextIndex: null,
+  fullTextIndexSize: null,
+  clusterPtrPos: 30811,
+  mimeListPos: 80,
+  mainPage: 238,
+  layoutPage: 4294967295,
+  mimeTypes: Map(9) {
+    0 => 'application/javascript',
+    1 => 'application/ogg',
+    2 => 'image/gif',
+    3 => 'image/jpeg',
+    4 => 'image/png',
+    5 => 'image/svg+xml',
+    6 => 'text/css',
+    7 => 'text/html',
+    8 => 'text/plain'
+  }
+}
+Article count is: null
+Title M/Scraper not found in the archive
+Calculated article count is: 236
+Archive type set to: open
+Title M/Scraper not found in the archive
+Title M/Name not found in the archive
+ZIMArchive ready, metadata will be added in the background
+  Block cache with archives of the same name
+    ✔ reads the second archive's own data when a different archive with the same name was opened first
+    ✔ keeps the same id when the same archive is opened again, so its cached blocks are reused
+
+  Dropping a folder (webkitGetAsEntry)
+    ✔ reads every file when the entries come in batches of 100
+    ✔ reads every file when the entries come in a single batch
+    ✔ handles an empty folder
+    ✔ rejects with the browser's error, instead of never finishing, when the folder cannot be read
+
+  init.js querystring overrides
+    parameters refused from the querystring on every origin
+      ✔ ignores sourceVerification when served from the production PWA
+      ✔ ignores sourceVerification on localhost, which is not necessarily a development machine
+      ✔ ignores sourceVerification on every other trusted origin too
+    the trust gate across content injection modes
+      ✔ defaults to verifying when nothing has been stored
+      ✔ verifies in ServiceWorkerLocal mode, where ZIM content is served on the extension origin
+      ✔ honours a stored opt-out in both Service Worker modes
+      ✔ leaves verification off in Restricted mode, where it is redundant
+    parameters restricted to development and test contexts
+      ✔ ignores noPrompts when served from the production PWA
+      ✔ ignores libraryUrl and altLibraryUrl when served from the production PWA
+      ✔ ignores PWAServer when served from the production PWA
+      ✔ honours noPrompts on localhost, so that the e2e suite keeps working
+      ✔ honours the loopback IP and the file protocol
+      ✔ ignores restricted parameters inside a packaged extension
+      ✔ still completes the handoff when the app is running inside an extension
+    the handoff between local code and the PWA
+      ✔ applies and stores the parameters sent when launching the PWA
+      ✔ applies and stores the parameters sent when reverting to local code
+      ✔ applies and stores defaultModeChangeAlertDisplayed
+      ✔ completes the handoff while still ignoring a restricted parameter added to the same link
+    validation of referrerExtensionURL
+      ✔ accepts a genuine extension URL
+      ✔ rejects a javascript: URL, which would otherwise reach location.href
+      ✔ rejects an http(s) URL, which would otherwise redirect the app off-site
+      ✔ rejects an extension URL with no host
+    validation of contentInjectionMode
+      ✔ accepts each of the three modes the app can represent
+      ✔ refuses a mode the app has no branch for, rather than storing it
+      ✔ refuses a value that merely starts with a real mode
+      ✔ heals an unrecognised mode stored before this validation existed
+      ✔ still reads back a stored mode the app can represent
+    parameters that are not in any list
+      ✔ applies an unrecognised parameter to the current page load but does not store it
+      ✔ applies a known but non-persistable setting for the current page load only
+      ✔ does not store anything for a parameter inherited from Object.prototype
+      ✔ ignores keys that could alter the prototype chain
+      ✔ leaves the title parameter to the router
+
+  Environment
+    ✔ Configure Mocha Test
+    ✔ Load archive files
+
+  Utils
+    ✔ Correctly read an IEEE_754 float from 4 bytes
+    ✔ Handle upper/lower case variation
+    ✔ Remove parameters from URLs
+    ✔ Resolve nested relative ZIM URLs and ignore query strings and fragments
+    ✔ Convert dataURI to Uint8Array (base64, percent-encoded, and edge cases)
+    ✔ Escape HTML-significant characters and handle empty input
+    ✔ Distinguish file-access errors from other errors and explain them appropriately
+
+  ZIM initialization
+    ✔ Set archive as ready
+    ✔ _readSplitSlice returns a Uint8Array on empty and non-empty slices
+
+  ZIM metadata
+    ✔ Read ZIM language
+Title M/zzz not found in the archive
+    ✔ Handle missing metadata
+
+  ZIM directory entry search and read
+    ✔ DirEntry.fromStringId "A Fool for You"
+Scanned 5 titles for "A" (found 5 matches)
+    ✔ FindDirEntriesWithPrefix "A"
+Scanned 5 titles for "A" (found 5 matches)
+    ✔ FindDirEntriesWithPrefix "a"
+Scanned 4 titles for "Blues Brothers" (found 3 matches)
+    ✔ FindDirEntriesWithPrefix "blues brothers"
+Scanned 4 titles for "Blues Brothers" (found 3 matches)
+    ✔ FindDirEntriesWithPrefix ignores leading whitespace in " \tblues brothers"
+    ✔ Redirect article "(The Night Time Is) The Right Time" to "Night Time Is the Right Time"
+    ✔ Redirect article "Raelettes"  to "The Raelettes"
+    ✔ Redirect article "Bein Green" to "Bein' Green"
+    ✔ Redirect article "America, the Beautiful" to "America the Beautiful"
+    ✔ Load image "m/RayCharles_AManAndHisSoul.jpg"
+    ✔ Load stylesheet "-/s/style.css"
+    ✔ Load javascript "-/j/local.js"
+    ✔ Load split article "A/Ray_Charles.html" (43ms)
+
+  Zim random and main articles
+    ✔ Find a random article
+    ✔ Find the main article
+    ✔ getMainPageDirEntry returns null when archive has no main page (0xffffffff)
+    ✔ getMainPageDirEntry returns null when main page index equals entryCount
+
+  isPartOfArchive (#1496)
+    ✔ gathers all the parts of a split archive, in folder order
+    ✔ does not throw, and finds every part, when the name has a "+"
+    ✔ finds the parts of a name with parentheses, as added by a browser to a duplicate download
+    ✔ finds the parts of a name with square brackets
+    ✔ finds the parts of a name with other regular expression characters
+    ✔ treats a "." in the name as a literal dot, not as a wildcard
+    ✔ does not pick up a file whose name merely ends with the same text
+    ✔ does not pick up parts of a different archive, or of the same name with an unfinished suffix
+    ✔ accepts a part picked in any position, not just the first
+    ✔ matches the .zim extension of the picked file in any case, as the split check always did
+    ✔ matches only the picked file itself when it is not split
+    ✔ matches a single file whose name has regular expression characters
+    ✔ distinguishes a duplicate download with parentheses from the original archive
+
+  zimArchiveLoader.scanForArchives
+    ✔ Report archives found in a single storage
+    ✔ Merge archives found across several storages
+    ✔ Collect every archive when storages resolve out of order (42ms)
+    ✔ Report an empty list when no storages are supplied
+    ✔ Skip storages that contain no archives
+    ✔ Invoke the error callback if any storage fails to scan
+    ✔ Invoke the error callback only once when every storage fails (61ms)
+
+  zimArchiveLoader.loadArchiveFromFiles
+Error reading archive file DOMException [NotReadableError]: The requested file could not be read
+    at new DOMException (node:internal/per_context/domexception:79:18)
+    at Context.<anonymous> (file://<pr-checkout>/tests/unit/spec/zimArchiveLoader.test.js:141:27)
+    at callFn (file://<pr-checkout>/node_modules/mocha/lib/runnable.js:360:23)
+    at Test.run (file://<pr-checkout>/node_modules/mocha/lib/runnable.js:348:7)
+    at Runner.runTest (<pr-checkout>/node_modules/mocha/lib/runner.cjs:809:10)
+    at <pr-checkout>/node_modules/mocha/lib/runner.cjs:959:12
+    at next (<pr-checkout>/node_modules/mocha/lib/runner.cjs:724:14)
+    at <pr-checkout>/node_modules/mocha/lib/runner.cjs:734:7
+    at next (<pr-checkout>/node_modules/mocha/lib/runner.cjs:595:14)
+    at Immediate.<anonymous> (<pr-checkout>/node_modules/mocha/lib/runner.cjs:702:5)
+    at process.processImmediate (node:internal/timers:574:21)
+    ✔ Pass the raw error and the file name to the error callback when the file cannot be read
+
+  DirEntry stringId round trip (real-world "|" titles)
+    ✔ preserves a title with LaTeX absolute-value bars (hsm.stackexchange.com)
+    ✔ preserves a "Page | Site" title produced by Zimit (tonedear.com)
+    ✔ preserves multiple pipes in both url and title, and a redirect target
+    ✔ falls back to the url via getTitleOrUrl() when title is empty
+    ✔ does not throw on a malformed percent-encoded sequence and falls back to the raw text
+
+
+  94 passing (627ms)
+

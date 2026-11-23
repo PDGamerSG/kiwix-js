@@ -1,0 +1,182 @@
+
+> kiwix-js@4.4.2 test-e2e-chrome
+> node tests/e2e/start-server-and-run-tests.js "npx mocha --no-config ./tests/e2e/runners/chrome/chromium.e2e.runner.js"
+
+Running tests against: ./dist/www/index.html (built version)
+Starting http-server...
+(node:44629) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server error: npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+http-server process started
+Server is ready on port 8080 (attempt 1)
+Running tests: npx mocha --no-config ./tests/e2e/runners/chrome/chromium.e2e.runner.js
+npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+
+Loading archive:
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimaa
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimab
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimac
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimad
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimae
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimaf
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimag
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimah
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimai
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimaj
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimak
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimal
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimam
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.ziman
+<pr-checkout>/tests/zims/legacy-ray-charles/wikipedia_en_ray_charles_2015-06.zimao
+
+
+Running Legacy Ray Charles tests on: chrome 158.0.8127.36
+
+Running Gutenberg RO tests on: chrome 158.0.8127.36
+
+Running Tonedear tests on: chrome 158.0.8127.36
+
+
+  Legacy Ray Charles test [XZ compression] [JQuery mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to jquery mode (5143ms)
+    ✔ Load legacy Ray Charles and check index contains specified article
+    ✔ Navigate to "This Little Girl of Mine"
+    ✔ Check for popover functionality when focusing link
+    ✔ Search for Ray Charles in title index and go to article
+
+  Legacy Ray Charles test [XZ compression] [SW mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to serviceworker mode (5220ms)
+    ✔ Load legacy Ray Charles and check index contains specified article
+    ✔ Navigate to "This Little Girl of Mine"
+    1) Check for popover functionality when focusing link
+    2) Search for Ray Charles in title index and go to article
+
+  Gutenberg_ro test [ZSTD compression] [JQuery mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to jquery mode (6359ms)
+    ✔ Load Modern zim file
+    ✔ Checking active content warning
+    - Following test skipped:
+    ✔ Sorting books by popularity
+    - Following test skipped:
+    - Sorting books by name
+    - Following test skipped:
+    - Change Language
+    ✔ Primary Search Autocomplete
+    ✔ Viewing HTML view
+    ✔ Navigating back
+    - Following test skipped:
+    - Author search Autocomplete
+    - Following test skipped:
+    - Author search Results
+    ✔ Download EPUB file
+
+  Gutenberg_ro test [ZSTD compression] [SW mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to serviceworker mode (6402ms)
+    ✔ Load Modern zim file
+    ✔ Checking active content warning
+    ✔ Sorting books by popularity
+    ✔ Sorting books by name
+    3) Change Language
+    ✔ Primary Search Autocomplete
+    ✔ Viewing HTML view
+    ✔ Navigating back
+    ✔ Author search Autocomplete
+    ✔ Author search Results
+    ✔ Download EPUB file
+
+  Archive load errors [jquery mode]
+    ✔ Allows retrying the dropdown after NotReadableError
+    ✔ Allows retrying the dropdown after Error
+
+  Archive load errors [serviceworker mode]
+    ✔ Allows retrying the dropdown after NotReadableError
+    ✔ Allows retrying the dropdown after Error
+
+  Tonedear test [JQuery mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to jquery mode (6337ms)
+    ✔ Load Tonedear archive
+    4) Navigate to Android & iOS section
+    ✔ Verify Android and iOS store images in Restricted mode
+
+  Tonedear test [SW mode]
+    ✔ Load Kiwix JS and check title
+    ✔ Switch to serviceworker mode (6357ms)
+    ✔ Load Tonedear archive
+    5) Navigate to Android & iOS section
+Failed to find store images: no such element: Unable to locate element: {"method":"css selector","selector":"*[id="articleContent"]"}
+  (Session info: chrome=158.0.8127.36)
+    6) Verify Android and iOS store images in ServiceWorker mode
+
+
+  42 passing (2m)
+  4 pending
+  6 failing
+
+  1) Legacy Ray Charles test [XZ compression] [SW mode]
+       Check for popover functionality when focusing link:
+     TimeoutError: Popover with "bluesy" text did not appear
+Wait timed out after 10104ms
+      at <pr-checkout>/node_modules/selenium-webdriver/lib/webdriver.js:929:22
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+  2) Legacy Ray Charles test [XZ compression] [SW mode]
+       Search for Ray Charles in title index and go to article:
+     NoSuchElementError: no such element: Unable to locate element: {"method":"css selector","selector":"*[id="prefix"]"}
+  (Session info: chrome=158.0.8127.36)
+      at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:523:15)
+      at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:524:13)
+      at Executor.execute (node_modules/selenium-webdriver/lib/http.js:456:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)
+      at async Context.<anonymous> (file://<pr-checkout>/tests/e2e/spec/legacy-ray_charles.e2e.spec.js:360:32)
+
+  3) Gutenberg_ro test [ZSTD compression] [SW mode]
+       Change Language:
+     TimeoutError: Waiting until element is visible
+Wait timed out after 3093ms
+      at <pr-checkout>/node_modules/selenium-webdriver/lib/webdriver.js:929:22
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+  4) Tonedear test [JQuery mode]
+       Navigate to Android & iOS section:
+     ElementNotInteractableError: element not interactable
+  (Session info: chrome=158.0.8127.36)
+      at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:523:15)
+      at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:524:13)
+      at Executor.execute (node_modules/selenium-webdriver/lib/http.js:456:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)
+      at async Context.<anonymous> (file://<pr-checkout>/tests/e2e/spec/tonedear.e2e.spec.js:163:17)
+
+  5) Tonedear test [SW mode]
+       Navigate to Android & iOS section:
+     ElementNotInteractableError: element not interactable
+  (Session info: chrome=158.0.8127.36)
+      at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:523:15)
+      at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:524:13)
+      at Executor.execute (node_modules/selenium-webdriver/lib/http.js:456:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)
+      at async Context.<anonymous> (file://<pr-checkout>/tests/e2e/spec/tonedear.e2e.spec.js:163:17)
+
+  6) Tonedear test [SW mode]
+       Verify Android and iOS store images in ServiceWorker mode:
+     NoSuchElementError: no such element: Unable to locate element: {"method":"css selector","selector":"*[id="articleContent"]"}
+  (Session info: chrome=158.0.8127.36)
+      at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:523:15)
+      at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:524:13)
+      at Executor.execute (node_modules/selenium-webdriver/lib/http.js:456:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)
+      at async Context.<anonymous> (file://<pr-checkout>/tests/e2e/spec/tonedear.e2e.spec.js:204:40)
+
+
+
+Stopping http-server...
+Server stopped
